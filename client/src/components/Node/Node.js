@@ -15,7 +15,7 @@ class Node extends Component {
     render() {
         return (
             <div className="Node">
-                {this.state.value}
+                {this.props.value}
             </div>
         )
     }

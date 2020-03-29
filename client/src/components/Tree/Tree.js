@@ -17,12 +17,15 @@ export default class Tree extends Component {
         this.state = {
             nodeValues : [ 40, 45, 30, 49, 28, 34],
             root : null,
-            tree: null
+            tree: null,
+            orderedValues : null
         }
     }
 
-    componentDidMount = () => {
-        this.creatingTree()
+    componentDidMount = async () => {
+        await this.creatingTree()
+        await this.BFS()
+        
     }
 
     creatingTree = () => {
@@ -56,9 +59,33 @@ export default class Tree extends Component {
             }
         })
 
-        console.log(root)
         this.setState({
             tree : root
+        })
+    }
+
+    BFS = () => {
+        let node = this.state.tree,
+            data = [],
+            queue = []
+        
+        queue.push(node)
+
+        while(queue.length){
+            node = queue.shift()
+            data.push(node.value)
+            if(node.left) queue.push(node.left);
+            if(node.right) queue.push(node.right) 
+        }
+
+        this.setState({
+            orderedValues : data
+        })
+    }
+
+    displayNodets = () => {
+        return this.state.orderedValues.map(value => {
+            return <Nodet value={value} />
         })
     }
     
@@ -66,7 +93,7 @@ export default class Tree extends Component {
     render() {
         return (
             <div className="Tree">
-                <Nodet/>
+                {this.state.orderedValues && this.displayNodets()}
             </div>
         )
     }
