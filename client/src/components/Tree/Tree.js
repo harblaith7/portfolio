@@ -15,7 +15,7 @@ export default class Tree extends Component {
     constructor(props){
         super(props)
         this.state = {
-            nodeValues : [ 40, 45, 30, 49, 28, 34],
+            nodeValues : [ 90, 95, 88, 103, 92, 86, 89, 122, 60, 70, 130, 12],
             root : null,
             tree: null,
             orderedValues : null
@@ -93,7 +93,47 @@ export default class Tree extends Component {
     render() {
         return (
             <div className="Tree">
-                {this.state.orderedValues && this.displayNodets()}
+                <div className="Tree__container">
+                    <div className="Tree__row-container">
+                        <Nodet value = {80} />
+                    </div>
+                    <div className="Tree__row-container">
+                        <div className="Tree__node-row-2">
+                            <Nodet value = {60} />
+                        </div>
+
+                        <div className="Tree__node-row-2">
+                            <Nodet value = {85} />
+                        </div>
+                    </div>
+                    <div className="Tree__row-container">
+                        <div className="Tree__node-row-3">
+                            <div className="Tree__node-3">
+                                <Nodet value = {60} />
+                            </div>
+                            <div className="Tree__node-3">
+                                <Nodet value = {60} />
+                            </div>
+                        </div>
+                        <div className="Tree__node-row-3">
+                            <div className="Tree__node-3">
+                                <Nodet value = {60} />
+                            </div>
+                            <div className="Tree__node-3">
+                                <Nodet value = {60} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="Tree__row-container">
+                        <Nodet value = {60} />
+                        <Nodet value = {85} />
+                        <Nodet value = {60} />
+                        <Nodet value = {85} />
+                        <Nodet value = {60} />
+                        <Nodet value = {85} />
+                        
+                    </div>
+                </div>
             </div>
         )
     }
