@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./Project.scss"
-import blumber from "../../assets/Images/blumber.png"
+
 
 export default class Project extends Component {
     render() {

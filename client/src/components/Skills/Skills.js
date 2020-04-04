@@ -10,7 +10,7 @@ export default class Skills extends Component {
                         My Skills
                     </h3>
                     <div className="Skills__graph-container">
-                        hi
+                        Need to think of design. Trying to do graph data structure but I just cant think of how to implement it yet 
                     </div>
                 </div>
             </div>

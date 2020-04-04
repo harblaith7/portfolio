@@ -11,7 +11,7 @@
     }
 
     &__heading {
-        font-size: 4rem;
+        font-size: 5rem;
         font-weight: 400;
     }
 
@@ -71,6 +71,10 @@
         &:hover {
             transform: scale(1.7);
         }
+    }
+
+    &__img {
+        width: 65rem
     }
 
 }
