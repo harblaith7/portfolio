@@ -1,0 +1,17 @@
+@import "../../sass/variables.scss";
+
+.Projects {
+    padding: 5rem 16.5rem;
+    font-family: 'Lato';
+
+    &__heading {
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: $light-black
+    }
+
+    &__projects-container {
+        margin-top: 4rem;
+    }
+}

@@ -1,0 +1,76 @@
+@import "../../sass/variables.scss";
+
+
+.Project {
+
+    margin-top: 10rem;
+
+    &__container {
+        text-align: center;
+        color: $off-black;
+    }
+
+    &__heading {
+        font-size: 4rem;
+        font-weight: 400;
+    }
+
+    &__line {
+        height: 0.25rem;
+        background-color: $lighter-black;
+        width: 7rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    &__description {
+        font-size: 1.75rem;
+        width: 45%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        line-height: 2.5rem;
+    }
+
+    &__img {
+        margin-top: 4rem;
+    }
+
+    &__btn-container {
+        margin-top: 5rem;
+    }
+
+    &__btn {
+  
+        font-size: 1.75rem;
+        background-color: forestgreen;
+        padding: 1.5rem 5rem;
+        color: $light-black;
+        text-decoration: none;
+        border-radius: 0.2rem;
+        text-transform: uppercase;
+        transition: all 0.5s ease-in;
+
+        &--modal {
+            margin-right: 2rem;
+            background-color: $primary-lighter;
+
+            &:hover {
+                background-color: $primary-light;
+            }
+        }
+
+        &--website {
+            margin-left: 2rem;
+            background-color: $secondary-lighter;
+
+            &:hover {
+                background-color: $secondary-light;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.7);
+        }
+    }
+
+}
