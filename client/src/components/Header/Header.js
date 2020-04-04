@@ -18,6 +18,24 @@ export default class Header extends Component {
                                         <i class="icon-facebook active"></i>
                                     </div>
                                 </div>
+                                <div class="button-wrap facebook">
+                                    <div class="button-inner-wrap">
+                                        <i class="icon-linkedin inactive"></i>
+                                        <i class="icon-linkedin active"></i>
+                                    </div>
+                                </div>
+                                <div class="button-wrap facebook">
+                                    <div class="button-inner-wrap">
+                                        <i class="icon-github inactive"></i>
+                                        <i class="icon-github active"></i>
+                                    </div>
+                                </div>
+                                <div class="button-wrap facebook">
+                                    <div class="button-inner-wrap">
+                                        <i class="icon-google-plus inactive"></i>
+                                        <i class="icon-google-plus active"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
