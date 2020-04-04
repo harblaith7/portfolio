@@ -1,0 +1,51 @@
+@import "../../sass/variables.scss";
+
+.About {
+    padding: 5rem 16.5rem;
+    font-family: 'Lato';
+
+    &__heading {
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: $light-black
+    }
+
+    &__about-container {
+        display: flex;
+        margin-top: 10rem;
+    }
+
+    &__img-section-container {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img-container {
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        height: 40rem;
+        width: 40rem;
+        background-image: url("../../assets/Images/laith-side-1.jpg");
+        background-size: cover;
+        margin-left: -3rem;
+    }
+
+    &__text-container {
+        width: 60%;
+        padding: 0 7rem
+    }
+
+    &__text-heading {
+        font-size: 3.25rem;
+        color: $light-black
+    }
+
+    &__text-description {
+        font-size: 1.75rem;
+        margin-top: 2rem;
+        word-spacing: 0.2rem;
+        line-height: 3rem;
+    }
+}
