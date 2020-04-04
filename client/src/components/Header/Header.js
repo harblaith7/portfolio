@@ -14,7 +14,7 @@ export default class Header extends Component {
                             transition={{duration:1.5}}
                             className="Header__text-container"
                         >
-                            <h4 className="Header__hello-msg">Hello World</h4>
+                            <h4 className="Header__hello-msg">Hello World!</h4>
                             <h1 className="Header__name-msg">I'm Laith Harb</h1>
                             <h3 className="Header__position-msg">A Full-Stack Developer</h3>
 
