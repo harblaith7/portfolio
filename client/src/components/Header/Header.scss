@@ -23,10 +23,10 @@
 
     &__text-container {
         position: absolute;
-        top: 50%;
-        left: 20%;
+        top: 25%;
+        left: 10%;
         transform: translate(0%,-50%);
-        width: 100%
+        width: 100%;
     }
 
     &__name-msg {
@@ -37,7 +37,7 @@
     }
 
     &__hello-msg {
-        font-size: 2.5rem;
+        font-size: 2.15rem;
         margin-bottom: 0.5rem;
         font-weight: 400;
         color: $dark-grey
@@ -53,6 +53,10 @@
     &__social-media-container {
        
         margin-top: 2rem;
+    }
+
+    &__project-btn {
+        margin-top: 4rem;
     }
 }
 
@@ -75,17 +79,17 @@
     i.active { color: #3B5998; }
   }
   
-  &.instagram {
+  &.linkedin {
     background-color: #3f729b;
     i.active { color: #3f729b; }
   }
   
-  &.xing {
+  &.github {
     background-color: #026466;
-    i.active { color: #026466; }
+    i.active { color: #032020; }
   }
   
-  &.youtube {
+  &.google {
     background-color: #e52d27;
     i.active { color: #e52d27; }
   }
@@ -104,7 +108,7 @@
 .button-inner-wrap {
   width: 40px;
   height: 40px;
-  border: 1px solid #DDD;
+  border: 1px solid rgba(148, 142, 133, 0.555);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -122,7 +126,7 @@
     transition: all 0.3s ease;
     
     &.inactive {
-      color: #CCC;
+      color: rgba(148, 142, 133, 0.795);
       transform: translate(-50%, -50%);
     }
     
