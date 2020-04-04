@@ -7,6 +7,15 @@
         height: 100%;
         display: flex;
         font-family: "Lato";
+        position: relative;
+        //color: rgba(228, 150, 5, 0.534)
+    }
+
+    &__background {
+      width: 70rem;
+      position: absolute;
+      right: -5%;
+      top: -10%
     }
 
     &__heading-container {

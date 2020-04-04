@@ -1,12 +1,14 @@
 import "./Header.scss"
 import React, { Component } from 'react'
-import {motion} from "framer-motion"
+import {motion} from "framer-motion";
+import orangeBackground from "../../assets/Images/orangepath.svg"
 
 export default class Header extends Component {
     render() {
         return (
             <div className="Header">
                 <div className="Header__container">
+                    <img  className="Header__background" src={orangeBackground} alt=""/>
                     <div className="Header__heading-container">
                         <motion.div 
                             animate={{opacity: 1, x:100}} 
