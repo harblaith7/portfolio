@@ -61,7 +61,7 @@
 @include width-600px {
     .Modal {
         width: 30rem;
-         height: 65rem;
+         height: 60rem;
 
          &__tech-container {
 
@@ -76,15 +76,15 @@
         }
 
         &__heading {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     
         &__side-heading {
-            font-size: 2rem;
+            font-size: 1.75rem;
         }
     
         &__description {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             margin-bottom: 2rem;
         }
     }
