@@ -1,79 +1,42 @@
-import React, { Component } from 'react';
-import "./Nav.scss";
-import {motion} from "framer-motion"
-
-const variants = {
-    open: { x: 0},
-    closed: { x: "-110%", transition: {delay: 0.5}}
-}
-
-const liVariants = {
-    open: { y: 0, opacity: 1},
-    closed: { y: -20, opacity: 0}  
-}
-
-const ulVariants = {
-    open: { 
-            transition: {
-                staggerChildren: 0.3,
-                delayChildren: 0.2,
-                when: "afterChildren"
-            }
-          },
-    closed: {}  
-}
-
+import React, { Component } from 'react'
+import "./Nav.scss"
 
 export default class Nav extends Component {
 
-    constructor(props){
-        super(props)
-        this.state = {
-            links : [
-                "Home",
-                "About",
-                "Skills",
-                "Projects",
-                "Contact"
-            ]
-        }
-    }
-
-    displayLinks = () => {
-        return this.state.links.map(link => {
-            return (
-                <motion.li 
-                    className="Nav__list-item"
-                    variants={liVariants}
-                >
-                    <a href="" className="Nav__link">
-                        {link}
-                    </a>
-                </motion.li>
-            )
-        })
-    }
 
     render() {
-
-        const {isNavOpen, toggleNav} = this.props;
-
         return (
-            <motion.nav 
-                className="Nav"
-                variants={variants}
-                initial="closed"
-                animate={isNavOpen ? "open" : "closed"}
-                transition={{damping: 900}}
-            >
-                <button onClick={toggleNav}>close</button>
-                <motion.ul 
-                    className="Nav__list" 
-                    variants={ulVariants}
-                >
-                    {this.displayLinks()}
-                </motion.ul>
-            </motion.nav>
+            <nav className={`Nav ${this.props.showBackgroundColor && "Nav--active"}`}>
+                <div className={`Nav__container ${this.props.showBackgroundColor && "Nav__container--active"}`}>
+                    <ul className="Nav__list">
+                        <li className="Nav__list-item Nav__list-item--home">
+                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                                Home
+                            </a>
+                        </li>
+                        <li className="Nav__list-item Nav__list-item">
+                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                                About
+                            </a>
+                        </li>
+                        <li className="Nav__list-item Nav__list-item">
+                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                                Skills
+                            </a>
+                        </li>
+                        <li className="Nav__list-item Nav__list-item">
+                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                                Projects
+                            </a>
+                        </li>
+                        <li className="Nav__list-item Nav__list-item">
+                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                                Highlights
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         )
     }
 }

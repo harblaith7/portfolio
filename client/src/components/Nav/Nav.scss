@@ -1,31 +1,53 @@
+@import "../../sass/variables.scss";
+
 .Nav {
+    height: 7.5vh;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
-    background-color: blue;
-    height: 100%;
-    padding: 4rem;
+    font-family: "Lato";
     z-index: 5;
+    transition: 1s background-color ease-in;
+    
 
-    &__list {
-        list-style: none;
+    &--active {
+        background-color: $navy-blue;
+        
     }
 
-    &__list-item {
-        margin-bottom: 1rem;
-    }
-
-    &__link {
-        font-size: 2rem;
-        text-decoration: none;
-        color: white;
+    &__container {
+        height: 100%;
+        transition: 1s border-bottom ease-in;
         border-bottom: 0.2rem solid transparent;
-        transition: 0 0.3s ease border;
 
-        &:hover {
-            border-bottom: 0.2rem yellow solid;
+        &--active {
+            border-bottom: 0.2rem solid $primary-dark;
         }
     }
 
+    &__list {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__list-item {
+        list-style: none;
+        padding: 0 4rem;
+
+        &--home {
+            margin-right: auto;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $off-black;
+        font-size: 1.5rem;
+        letter-spacing: 0.25rem;
+        transition: color 0.5s ease in;
+
+        &--active {
+            color: $off-white
+        }
+    }
 }
