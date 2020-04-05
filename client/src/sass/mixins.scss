@@ -1,7 +1,64 @@
 
+@mixin width-1200px {
+    @media (max-width: 1200px){
+        @content
+    }
+};
+
+@mixin width-1100px {
+    @media (max-width: 1100px){
+        @content
+    }
+};
+
+@mixin width-1050px {
+    @media (max-width: 1050px){
+        @content
+    }
+};
+
+@mixin width-950px {
+    @media (max-width: 950px){
+        @content
+    }
+};
+
+
 
 @mixin width-900px {
     @media (max-width: 900px){
         @content
+    }
+};
+
+
+@mixin width-800px {
+    @media (max-width: 800px){
+        @content
+    }
+};
+
+@mixin width-650px {
+    @media (max-width: 650px){
+        @content
+    }
+};
+
+@mixin width-550px {
+    @media (max-width: 550px){
+        @content
+    }
+};
+
+@mixin width-500px {
+    @media (max-width: 500px){
+        @content
+    }
+};
+
+
+@mixin width-450px {
+    @media (max-width: 450px){
+         @content
     }
 }

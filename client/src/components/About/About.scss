@@ -1,7 +1,8 @@
 @import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .About {
-    padding: 5rem 16.5rem;
+    padding: 5rem 3rem 4rem 16.5rem;
     font-family: 'Lato';
 
     &__heading {
@@ -47,5 +48,88 @@
         margin-top: 2rem;
         word-spacing: 0.2rem;
         line-height: 3rem;
+    }
+}
+
+
+
+@include width-1100px {
+    .About {
+
+        &__about-container {
+            margin-top: 10rem;
+        }
+
+        padding: 5rem 0;
+
+        &__heading {
+            text-align: center;
+            margin-left: -3rem;
+        }
+
+        &__about-container {
+            flex-direction: column;
+        }
+
+        &__img-container {
+            height: 40rem;
+            width: 40rem;
+        }
+
+        &__img-section-container {
+            width: auto;
+        }
+
+        &__text-container {
+            width: 85%;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+    }
+}
+
+@include width-650px {
+    .About {
+        &__text-container {
+            width: 95%;
+        }
+    }
+}
+
+@include width-550px {
+    .About {
+        &__img-container {
+            height: 30rem;
+            width: 30rem;
+        }
+
+        &__img-container {
+            margin: 0
+        }
+    }
+}
+
+@include width-450px {
+    .About {
+
+
+        &__text-description {
+            font-size: 1.25rem;
+            width: 100%;
+            padding: 0
+        }
+
+        &__text-container {
+            padding: 1rem
+        }
+
+        &__img-section-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        
+    
     }
 }

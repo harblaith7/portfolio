@@ -1,4 +1,5 @@
 @import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 
 .Project {
@@ -77,4 +78,65 @@
         width: 65rem
     }
 
+}
+
+@include width-900px {
+    .Project {
+        &__description {
+            width: 65%
+        }
+    }
+}
+
+@include width-800px {
+    .Project {
+        &__img {
+            width: 55rem
+        }
+    }
+}
+
+@include width-650px {
+    .Project {
+
+        &__img {
+            width: 45rem
+        }
+        &__description {
+            width: 75%
+        }
+    }
+}
+
+@include width-500px {
+    .Project {
+  
+        &__img {
+            width: 35rem
+        }
+
+        &__description {
+            width: 75%
+        }
+
+        &__btn-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__btn {
+            width: 80%;
+
+            &--modal {
+                margin: 0 auto;
+                margin-bottom: 1.5rem;
+            }
+
+            &--website {
+                margin: 0 auto;
+                margin-top: 0.5rem;
+            }
+
+        }
+    }
 }
