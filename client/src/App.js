@@ -27,7 +27,7 @@ export default class App extends Component {
 
   componentDidMount() {
     document.addEventListener("scroll", () => {
-      if(window.scrollY > 650) {
+      if(window.scrollY > 550) {
         this.setState({
           showBackgroundColor: true
         })
@@ -42,7 +42,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-          <Nav showBackgroundColor={this.state.showBackgroundColor}/>
+          <Nav 
+            showBackgroundColor={this.state.showBackgroundColor}
+            toggleNav = {this.toggleNav}
+          />
           <SideNav 
             isNavOpen={this.state.isNavOpen}
             toggleNav = {this.toggleNav}

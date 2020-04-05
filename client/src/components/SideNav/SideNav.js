@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import "./SideNav.scss";
 import {motion} from "framer-motion"
+import closeBtn from "../../assets/Images/close-btn.svg"
 
 const variants = {
     open: { x: 0},
-    closed: { x: "-110%", transition: {delay: 0.5}}
+    closed: { x: "110%", transition: {delay: 0.5}}
 }
 
 const liVariants = {
@@ -66,7 +67,9 @@ export default class Nav extends Component {
                 animate={isNavOpen ? "open" : "closed"}
                 transition={{damping: 900}}
             >
-                <button onClick={toggleNav}>close</button>
+                <button onClick={toggleNav} className="SideNav__close-btn">
+                    <img src={closeBtn}/>
+                </button>
                 <motion.ul 
                     className="SideNav__list" 
                     variants={ulVariants}

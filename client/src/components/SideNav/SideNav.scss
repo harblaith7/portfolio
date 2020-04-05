@@ -1,30 +1,49 @@
+@import "../../sass/variables.scss";
+
 .SideNav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    background-color: blue;
+    background-color: $navy-blue;
     height: 100%;
     padding: 4rem;
     z-index: 5;
+    font-family: "Lato";
+   
 
     &__list {
         list-style: none;
+        text-align: center;
+        margin-top: 4rem;
     }
 
     &__list-item {
-        margin-bottom: 1rem;
+        margin-bottom: 7.5rem;
     }
 
     &__link {
-        font-size: 2rem;
+        font-size: 3rem;
         text-decoration: none;
-        color: white;
+        color: $off-white;
         border-bottom: 0.2rem solid transparent;
         transition: 0 0.3s ease border;
 
         &:hover {
             border-bottom: 0.2rem yellow solid;
+        }
+    }
+
+    &__close-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: 3%;
+
+        &:focus {
+            outline: none
         }
     }
 

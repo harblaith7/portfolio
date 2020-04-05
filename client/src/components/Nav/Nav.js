@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import "./Nav.scss"
+import "./Nav.scss";
+import hamburger from "../../assets/Images/hamburger.svg"
 
 export default class Nav extends Component {
 
@@ -14,25 +15,28 @@ export default class Nav extends Component {
                                 Home
                             </a>
                         </li>
-                        <li className="Nav__list-item Nav__list-item">
+                        <li className="Nav__list-item">
                             <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 About
                             </a>
                         </li>
-                        <li className="Nav__list-item Nav__list-item">
+                        <li className="Nav__list-item">
                             <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 Skills
                             </a>
                         </li>
-                        <li className="Nav__list-item Nav__list-item">
+                        <li className="Nav__list-item">
                             <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 Projects
                             </a>
                         </li>
-                        <li className="Nav__list-item Nav__list-item">
+                        <li className="Nav__list-item">
                             <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 Highlights
                             </a>
+                        </li>
+                        <li className="Nav__list-item Nav__list-item--burger" onClick={this.props.toggleNav}>
+                            <img src={hamburger} alt=""/>
                         </li>
                     </ul>
                 </div>
