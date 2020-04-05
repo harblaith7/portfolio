@@ -44,6 +44,12 @@
     }
 };
 
+@mixin width-600px {
+    @media (max-width: 600px){
+        @content
+    }
+};
+
 @mixin width-550px {
     @media (max-width: 550px){
         @content

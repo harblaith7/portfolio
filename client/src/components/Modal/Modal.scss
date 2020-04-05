@@ -1,0 +1,93 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.Modal {
+    background-color: $off-white;
+    padding: 2.5rem;
+    width: 55rem;
+    height: 65rem;
+    font-family: "Lato";
+    color: $light-black;
+
+    &__heading {
+        font-size: 4rem;
+        color: $primary-dark;
+    }
+
+    &__side-heading {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__tech-container {
+
+        display: flex;
+        align-items: center
+        
+    }
+
+    &__images {
+        width: 5rem;
+        margin-left: 1rem;
+        margin-right: 2rem
+    }
+}
+
+@include width-600px {
+    .Modal {
+        width: 50rem;
+         height: 65rem;
+    }
+}
+
+@include width-600px {
+    .Modal {
+        width: 45rem;
+         height: 65rem;
+
+         &__images {
+            width: 4rem;
+        }
+    }
+
+
+}
+
+@include width-600px {
+    .Modal {
+        width: 30rem;
+         height: 65rem;
+
+         &__tech-container {
+
+          justify-content: space-between
+            
+        }
+
+         &__images {
+            width: 3.5rem;
+            margin-left: 0rem;
+            margin-right: 0rem
+        }
+
+        &__heading {
+            font-size: 3rem;
+        }
+    
+        &__side-heading {
+            font-size: 2rem;
+        }
+    
+        &__description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+
+}

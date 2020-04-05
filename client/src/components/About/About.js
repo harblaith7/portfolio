@@ -5,7 +5,7 @@ import laithImageOne from "../../assets/Images/laith-side-1.jpg"
 export default class About extends Component {
     render() {
         return (
-            <div className="About">
+            <div className="About" id="about">
                 <div className="About__container">
                     <h3 className="About__heading">
                         About

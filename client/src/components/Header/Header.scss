@@ -223,7 +223,7 @@
 
     &__text-container {
       left: -10%;
-      top: 30%
+      top: 20%
     }
 
   }
@@ -296,6 +296,7 @@
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
   margin-right: 3rem;
   
+  
   &.facebook {
     background-color: #3B5998;
     i.active { color: #3B5998; }
@@ -339,6 +340,7 @@
   border-radius: 100%;
   transform: translate(-50%, -50%);
   transition: all 0.3s ease;
+  text-decoration: none;
   
   i {
     position: absolute;

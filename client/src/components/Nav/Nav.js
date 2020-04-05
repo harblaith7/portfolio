@@ -16,22 +16,22 @@ export default class Nav extends Component {
                             </a>
                         </li>
                         <li className="Nav__list-item">
-                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                            <a href="#about" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 About
                             </a>
                         </li>
                         <li className="Nav__list-item">
-                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                            <a href="#" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 Skills
                             </a>
                         </li>
                         <li className="Nav__list-item">
-                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                            <a href="#projects" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 Projects
                             </a>
                         </li>
                         <li className="Nav__list-item">
-                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                            <a href="#" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 Highlights
                             </a>
                         </li>
