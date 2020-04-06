@@ -12,6 +12,7 @@ import passport from "../../assets/Images/tech-stacks/passport.png"
 import redux from "../../assets/Images/tech-stacks/redux.png"
 import stripe from "../../assets/Images/tech-stacks/stripe.png"
 import mongo from "../../assets/Images/tech-stacks/mongo.png"
+import framerMotion from "../../assets/Images/tech-stacks/framer-motion.png"
 
 export default class Projects extends Component {
 
@@ -45,7 +46,7 @@ export default class Projects extends Component {
                     image: portfolio,
                     reason: "I want to show you my projects! I also wanted to use this as an opportunity to learn more about how to animate a react application.",
                     techStack: "I simply used React for this project. However, I am utilizing framer-motion to create smooth animations",
-                    techStackImages: [react],
+                    techStackImages: [react, framerMotion],
                     status: "Almost Completed / Deployed",
                     url: "https://laithharb.com/"
                 },
