@@ -6,7 +6,7 @@ import orangeBackground from "../../assets/Images/orangepath.svg"
 export default class Header extends Component {
     render() {
         return (
-            <div className="Header">
+            <div className="Header" id="home">
                 <div className="Header__container">
                     <img  className="Header__background" src={orangeBackground} alt=""/>
                     <div className="Header__heading-container">

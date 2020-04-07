@@ -11,7 +11,7 @@ export default class Nav extends Component {
                 <div className={`Nav__container ${this.props.showBackgroundColor && "Nav__container--active"}`}>
                     <ul className="Nav__list">
                         <li className="Nav__list-item Nav__list-item--home">
-                            <a href="" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                            <a href="#home" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 Home
                             </a>
                         </li>
@@ -31,7 +31,7 @@ export default class Nav extends Component {
                             </a>
                         </li>
                         <li className="Nav__list-item">
-                            <a href="#" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                            <a href="#" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`} >
                                 Highlights
                             </a>
                         </li>
