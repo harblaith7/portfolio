@@ -31,11 +31,11 @@ export default class Nav extends Component {
         super(props)
         this.state = {
             links : [
-                "Home",
-                "About",
-                "Skills",
-                "Projects",
-                "Contact"
+                {name : "Home", id: "home"},
+                {name : "About", id: "about"},
+                {name : "Skills", id : "skills"},
+                {name: "Projects", id : "projects"},
+                
             ]
         }
     }
@@ -47,8 +47,8 @@ export default class Nav extends Component {
                     className="SideNav__list-item"
                     variants={liVariants}
                 >
-                    <a href="" className="SideNav__link">
-                        {link}
+                    <a href={`#${link.id}`} className="SideNav__link">
+                        {link.name}
                     </a>
                 </motion.li>
             )

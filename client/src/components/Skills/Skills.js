@@ -18,32 +18,38 @@ export default class Skills extends Component {
                 {
                     image : react,
                     top: 50,
-                    right: 80
+                    right: 80,
+                    name: "react"
                 },
                 {
                     image: node,
                     top: 10,
-                    right: 60
+                    right: 60,
+                    name: "node"
                 },
                 {
                     image: redux,
                     top: 50,
-                    right: 35
+                    right: 35,
+                    name: "redux"
                 },
                 {
                     image: mongo,
                     top: 90,
-                    right: 60
+                    right: 60,
+                    name: "mongo"
                 },
                 {
                     image: typescript,
                     top: 90,
-                    right: 15
+                    right: 15,
+                    name: "typescript"
                 },
                 {
                     image: mysql,
                     top: 10,
-                    right: 15
+                    right: 15,
+                    name: "mysql"
                 }
             ]
         }
@@ -55,6 +61,7 @@ export default class Skills extends Component {
             return (
                 <motion.div 
                     className="Skills__node"
+                    id={skill.name}
                     style={{
                         backgroundImage : `url(${skill.image})`,
                         top: `${skill.top}%`,
@@ -85,7 +92,16 @@ export default class Skills extends Component {
                     </h3>
                     <div className="Skills__graph-container">
                        {this.displayNodes()}
-                       <svg style={{top: "17.5%", right: "37.5%", position: "absolute"}}><line x1="200%" y1="10%" x2="15%" y2="10%" stroke="black" style={{}}/></svg>
+
+                       <svg id="svg1" width="100" height="0" >
+                            <path
+                                id="myNewPath"
+                                d="M0 0"             
+                                stroke-width="0.3em"
+                                style={{stroke:"#555", fill:"none"}}
+                            />
+                       </svg>
+
                     </div>
                 </div>
             </motion.div>
