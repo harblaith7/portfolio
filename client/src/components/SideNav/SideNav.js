@@ -47,7 +47,7 @@ export default class Nav extends Component {
                     className="SideNav__list-item"
                     variants={liVariants}
                 >
-                    <a href={`#${link.id}`} className="SideNav__link">
+                    <a href={`#${link.id}`} className="SideNav__link" onClick={this.props.toggleNav}>
                         {link.name}
                     </a>
                 </motion.li>
