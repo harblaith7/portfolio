@@ -280,7 +280,7 @@
 @include width-600px {
     .Skills {
         padding: 7.5rem 8rem;
-
+        
 
     }
 }
@@ -290,7 +290,7 @@
 @include width-500px {
     .Skills {
         padding: 7.5rem 5rem;
-
+        
         &__graph-container {
 
             margin-left: 1rem;
@@ -307,6 +307,8 @@
 @include width-400px {
     .Skills {
         padding: 7.5rem 3rem;
+        background-color: blue;
+        height: 200vh;
 
         &__node {
             width: 6rem;
@@ -315,7 +317,7 @@
         }
 
         &__graph-container {
-
+            margin-bottom: 3rem;
             margin-left: 2rem;
         }
     }
