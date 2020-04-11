@@ -57,7 +57,31 @@ export default class Skills extends Component {
                     image: node,
                     top: 15,
                     right: 70,
-                    name: "node"
+                    name: "node",
+                    concepts: ["Non-blocking I/O", "Event loop", "Modules", "Prototypes"],
+                    smallDescription: "Node was the first technology I learned when diving into back-end development. I never use Node in isolation, but rather with Express as well.",
+                    uses: [
+                        "Store data in native JSON format in database",
+                        "Creating easy, fast and scalable full-stack applications"
+                    ],
+                    projects : [
+                        {
+                            project: "Blumber",
+                            url: ""
+                        },
+                        {
+                            project: "Greatrr",
+                            url: ""
+                        },
+                        {
+                            project: "my portfolio",
+                            url: ""
+                        },
+                        {
+                            project: "snake game",
+                            url: ""
+                        }
+                    ]
                 },
 
                 {
@@ -95,31 +119,149 @@ export default class Skills extends Component {
                     image: mongo,
                     top: 85,
                     right: 70,
-                    name: "mongo"
+                    name: "mongo",
+                    concepts: ["Documents/Subdocuments", "Embed/Reference", "Mongoose"],
+                    smallDescription: "For all my applications that require a database, I've used MongoDB/Mongoose.",
+                    uses: [
+                        "Fetch appropriate user data based on authentication id",
+                        "Perform all necessary CRUD operations"
+                    ],
+                    projects : [
+                        {
+                            project: "Blumber",
+                            url: ""
+                        },
+                        {
+                            project: "Greatrr",
+                            url: ""
+                        },
+                        {
+                            project: "my portfolio",
+                            url: ""
+                        },
+                        {
+                            project: "snake game",
+                            url: ""
+                        }
+                    ]
                 },
                 {
                     image: typescript,
                     top: 85,
                     right: 25,
-                    name: "typescript"
+                    name: "typeScript",
+                    concepts: ["Type System", "Annotation/Inference", "Design Patterns"],
+                    smallDescription: "I am currently learning TypeScript. I'm realizing how powerful it can be to debug during development. Once I understand the concepts, I will use it in all my future JavaScript applications",
+                    uses: [
+                        "Catch errors in development instead of in the browser"
+                    ],
+                    projects : [
+                        {
+                            project: "Blumber",
+                            url: ""
+                        },
+                        {
+                            project: "Greatrr",
+                            url: ""
+                        },
+                        {
+                            project: "my portfolio",
+                            url: ""
+                        },
+                        {
+                            project: "snake game",
+                            url: ""
+                        }
+                    ]
                 },
                 {
                     image: mysql,
                     top: 15,
                     right: 25,
-                    name: "mysql"
+                    name: "mySQL",
+                    concepts: ["One to Many Relationship", "Many to Many Relationship", "Inner/Left/Right Join"],
+                    smallDescription: "I learned MySQL on my own and I find that it is very readable and easy to use. I intend to use MySQL as my database for my next project.",
+                    uses: [
+                        "Join tables to create one table with desired data",
+                        "Perform CRUD operations"
+                    ],
+                    projects : [
+                        {
+                            project: "Blumber",
+                            url: ""
+                        },
+                        {
+                            project: "Greatrr",
+                            url: ""
+                        },
+                        {
+                            project: "my portfolio",
+                            url: ""
+                        },
+                        {
+                            project: "snake game",
+                            url: ""
+                        }
+                    ]
                 },
                 {
                     image: graphql,
                     top: 50,
                     right: 15.5,
-                    name: "graphql"
+                    name: "graphQL",
+                    concepts: ["N/A"],
+                    smallDescription: "Honestly, I don't know any GraphQL at the moment, but it is the next technology stack on my \"to learn\" list after TypeScript.",
+                    uses: [
+                        "N/A"
+                    ],
+                    projects : [
+                        {
+                            project: "Blumber",
+                            url: ""
+                        },
+                        {
+                            project: "Greatrr",
+                            url: ""
+                        },
+                        {
+                            project: "my portfolio",
+                            url: ""
+                        },
+                        {
+                            project: "snake game",
+                            url: ""
+                        }
+                    ]
                 },
                 {
                     image: express,
                     top: 0,
                     right: 47.5,
-                    name: "express"
+                    name: "express",
+                    concepts: ["Routes", "Callback", "Asynchronous"],
+                    smallDescription: "I use the Express library all the time when making full-stack applications. It allows me to make complex routes that fetch data and redirect users to different pages",
+                    uses: [
+                        "Create routes to filter through and fetch appropriate data from database or JSON file",
+                        "Create, send and save data to database"
+                    ],
+                    projects : [
+                        {
+                            project: "Blumber",
+                            url: ""
+                        },
+                        {
+                            project: "Greatrr",
+                            url: ""
+                        },
+                        {
+                            project: "my portfolio",
+                            url: ""
+                        },
+                        {
+                            project: "snake game",
+                            url: ""
+                        }
+                    ]
                 },
                 
             ],
@@ -186,7 +328,7 @@ export default class Skills extends Component {
                     </h3>
                     <p className="Skills__header-description">
                         Alright, enough of me describing myself in the third-person. It's now time for you to check out my skills!
-                        Hover over a node below and it will anxiously await a click. Once you click it, you'll get a description 
+                        Hover over a node below and observe it anxiously await a click. Once you click it, you'll get a brief description 
                         of what I know about that particular technology.
                     </p>
                     <div className="Skills__skills-container">
