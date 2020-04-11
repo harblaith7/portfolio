@@ -5,6 +5,13 @@
     }
 };
 
+@mixin width-1150px {
+    @media (max-width: 1100px){
+        @content
+    }
+};
+
+
 @mixin width-1100px {
     @media (max-width: 1100px){
         @content
@@ -38,6 +45,12 @@
     }
 };
 
+@mixin width-750px {
+    @media (max-width: 750px){
+        @content
+    }
+};
+
 @mixin width-650px {
     @media (max-width: 650px){
         @content
@@ -65,6 +78,12 @@
 
 @mixin width-450px {
     @media (max-width: 450px){
+         @content
+    }
+};
+
+@mixin width-400px {
+    @media (max-width: 400px){
          @content
     }
 }

@@ -24,8 +24,6 @@ export default class Skills extends Component {
 
                 {
                     image : react,
-                    top: 50,
-                    right: 80,
                     name: "react",
                     concepts: ["React Router", "LifeCycle Methods", "Hooks", "Context"],
                     smallDescription: "I love React! I use it consistently on all my projects. Below I highlighted the concepts I understand about it and how it use it.",
@@ -86,8 +84,6 @@ export default class Skills extends Component {
 
                 {
                     image: redux,
-                    top: 100,
-                    right: 47.5,
                     name: "redux",
                     concepts: ["Centralized State", "Reducers", "Action Creators"],
                     smallDescription: "I found Redux to be extremely hard to grasp in the beginning. However, once I got past all the new terminology, I realized how powerful of a tool it can be.",
@@ -117,9 +113,7 @@ export default class Skills extends Component {
                 
                 {
                     image: mongo,
-                    top: 85,
-                    right: 70,
-                    name: "mongo",
+                    name: "mongoDB",
                     concepts: ["Documents/Subdocuments", "Embed/Reference", "Mongoose"],
                     smallDescription: "For all my applications that require a database, I've used MongoDB/Mongoose.",
                     uses: [
@@ -147,8 +141,6 @@ export default class Skills extends Component {
                 },
                 {
                     image: typescript,
-                    top: 85,
-                    right: 25,
                     name: "typeScript",
                     concepts: ["Type System", "Annotation/Inference", "Design Patterns"],
                     smallDescription: "I am currently learning TypeScript. I'm realizing how powerful it can be to debug during development. Once I understand the concepts, I will use it in all my future JavaScript applications",
@@ -176,8 +168,6 @@ export default class Skills extends Component {
                 },
                 {
                     image: mysql,
-                    top: 15,
-                    right: 25,
                     name: "mySQL",
                     concepts: ["One to Many Relationship", "Many to Many Relationship", "Inner/Left/Right Join"],
                     smallDescription: "I learned MySQL on my own and I find that it is very readable and easy to use. I intend to use MySQL as my database for my next project.",
@@ -206,8 +196,6 @@ export default class Skills extends Component {
                 },
                 {
                     image: graphql,
-                    top: 50,
-                    right: 15.5,
                     name: "graphQL",
                     concepts: ["N/A"],
                     smallDescription: "Honestly, I don't know any GraphQL at the moment, but it is the next technology stack on my \"to learn\" list after TypeScript.",
@@ -235,8 +223,6 @@ export default class Skills extends Component {
                 },
                 {
                     image: express,
-                    top: 0,
-                    right: 47.5,
                     name: "express",
                     concepts: ["Routes", "Callback", "Asynchronous"],
                     smallDescription: "I use the Express library all the time when making full-stack applications. It allows me to make complex routes that fetch data and redirect users to different pages",
@@ -288,13 +274,11 @@ export default class Skills extends Component {
         return this.state.skills.map(skill => {
             return (
                 <motion.div 
-                    className={`Skills__node shake-little ${skill.name === this.state.currentDescription && "shake-constant Skills__node--active"}`}
+                    className={`Skills__node shake-little Skills__node--${skill.name} ${skill.name === this.state.currentDescription && "shake-constant Skills__node--active"}`}
                     id={skill.name}
                     onClick={this.changeSkillDescription}
                     style={{
-                        backgroundImage : `url(${skill.image})`,
-                        top: `${skill.top}%`,
-                        right: `${skill.right}%`
+                        backgroundImage : `url(${skill.image})`
                     }}
                     drag
                     dragConstraints={{
@@ -323,14 +307,17 @@ export default class Skills extends Component {
                 className="Skills" 
             >
                 <div className="Skills__container">
-                    <h3 className="Skills__heading">
-                        My Skills
-                    </h3>
-                    <p className="Skills__header-description">
-                        Alright, enough of me describing myself in the third-person. It's now time for you to check out my skills!
-                        Hover over a node below and observe it anxiously await a click. Once you click it, you'll get a brief description 
-                        of what I know about that particular technology.
-                    </p>
+                    <div className="Skills__heading-container">
+                        <h3 className="Skills__heading">
+                            My Skills
+                        </h3>
+                        <p className="Skills__header-description">
+                            Alright, enough of me describing myself in the third-person. It's now time for you to check out my skills!
+                            Hover over a node below and observe it anxiously await a click. Once you click it, you'll get a brief description 
+                            of what I know about that particular technology.
+                        </p>
+                    </div>
+                    
                     <div className="Skills__skills-container">
                         <div className="Skills__graph-container">
                             {this.displayNodes()}

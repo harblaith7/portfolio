@@ -1,4 +1,5 @@
 @import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .Skills {
     padding: 7.5rem 16.5rem;
@@ -53,6 +54,46 @@
         &--active {
             background-color: rgba(179, 235, 179, 0.247);
         }
+
+        &--react {
+            top: 50%;
+            right: 80%
+        }
+
+        &--node {
+            top: 15%;
+            right: 70%
+        }
+
+        &--redux {
+            top: 100%;
+            right: 47.5%
+        }
+
+        &--mongoDB {
+            top: 85%;
+            right: 70%
+        }
+
+        &--typeScript {
+            top: 85%;
+            right: 20%
+        }
+
+        &--mySQL {
+            top: 15%;
+            right: 25%;
+        }
+
+        &--graphQL {
+            top: 50%;
+            right: 15.5%
+        }
+
+        &--express {
+            top: 0;
+            right: 47.5%,
+        }
     }
 
     &__tech-title {
@@ -90,3 +131,193 @@
         margin-top: 2rem; 
     }
 }
+
+
+@include width-1200px {
+    .Skills {
+
+        &__list-item {
+            font-size: 1.35rem;
+        }
+
+        &__node {
+            width: 9rem;
+            height: 9rem;
+
+            &--graphQL {
+                top: 40%;
+            }
+
+            &--react {
+                top: 40%;
+            }
+
+            &--typeScript {
+                top: 70%;
+            }
+
+            &--mongoDB {
+                top: 70%;
+            }
+
+            &--redux {
+                top: 85%;
+            }
+        }
+    } 
+}
+
+@include width-1150px {
+
+    .Skills {
+        
+        height: 170vh;
+
+        &__skills-container {
+            flex-direction: column;
+        }
+
+        &__header-description {
+            width: 95%
+        }
+
+        &__graph-container {
+            width: 100%;
+            margin-top: -3rem;
+        }
+
+        &__heading-container {
+            text-align: center;
+        }
+
+        &__list-item {
+            font-size: 1.75rem;
+        }
+
+        &__description-container {
+            width: 100%;
+            margin-top: 7.5rem;
+        }
+            
+        
+    }
+}
+
+@include width-800px {
+    .Skills {
+
+        &__graph-container {
+            //background-color: blue;
+            padding: 0;
+        }
+
+        &__description-container {
+            width: 100%;
+            margin-top: -11.5rem;
+        }
+
+        
+        &__node {
+            width: 8rem;
+            height: 8rem;
+            background-size: 5rem;
+            transform: translate(-50%, -50%);
+
+            &--express {
+                top: 0;
+                right: 45%,
+            }
+
+            &--node {
+                top: 0%;
+                right: 75%
+            }
+
+            &--mySQL {
+                top: 0%;
+                right: 15%;
+            }  
+            
+            &--react {
+                top: 25%;
+                right: 75%
+            }
+
+            &--graphQL {
+                top: 25%;
+                right: 15%
+            }
+    
+            &--redux {
+                top: 50%;
+                right: 45%
+            }
+    
+            &--mongoDB {
+                top: 50%;
+                right: 75%
+            }
+    
+            &--typeScript {
+                top: 50%;
+                right: 15%
+            }
+         
+        }
+    }
+}
+
+@include width-750px {
+    .Skills {
+        padding: 7.5rem 10rem;
+        &__graph-container {
+            
+            margin-left: 2rem;
+        }
+    }
+}
+
+@include width-600px {
+    .Skills {
+        padding: 7.5rem 8rem;
+
+
+    }
+}
+
+
+
+@include width-500px {
+    .Skills {
+        padding: 7.5rem 5rem;
+
+        &__graph-container {
+
+            margin-left: 1rem;
+        }
+
+        &__node {
+            width: 7rem;
+            height: 7rem
+        }
+    }
+}
+
+
+@include width-400px {
+    .Skills {
+        padding: 7.5rem 3rem;
+
+        &__node {
+            width: 6rem;
+            height: 6rem;
+            background-size: 4rem;
+        }
+
+        &__graph-container {
+
+            margin-left: 2rem;
+        }
+    }
+}
+
