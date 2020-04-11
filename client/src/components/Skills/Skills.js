@@ -288,7 +288,7 @@ export default class Skills extends Component {
         return this.state.skills.map(skill => {
             return (
                 <motion.div 
-                    className={`Skills__node shake-little ${skill.name === "question" && "Skills__node--small"}`}
+                    className={`Skills__node shake-little ${skill.name === this.state.currentDescription && "shake-constant Skills__node--active"}`}
                     id={skill.name}
                     onClick={this.changeSkillDescription}
                     style={{
