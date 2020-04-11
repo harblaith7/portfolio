@@ -3,7 +3,7 @@
 .Skills {
     padding: 7.5rem 16.5rem;
     font-family: 'Lato';
-    display: none;
+    margin-bottom: 10rem;
     
 
     &__heading {
@@ -13,11 +13,17 @@
         color: $light-black
     }
 
+    &__skills-container {
+        display: flex;
+
+        margin-top: 7.5rem;
+    }
+
     &__graph-container {
-        
-        margin-top: 5rem;
         height: 60vh;
         position: relative;
+     
+        width: 55%
     }
 
     &__node {
@@ -34,6 +40,13 @@
         background-position: center;
         background-repeat: no-repeat;
         transform: translate(-50%, -50%);
-        border: 0.15rem solid $navy-blue-light
+        border: 0.15rem solid $navy-blue-light;
+
+        &--small {
+            width: 7.5rem;
+            height: 7.5rem
+        }
     }
+
+    
 }
