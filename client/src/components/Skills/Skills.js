@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./Skills.scss"
-import {motion} from "framer-motion";
+import {motion, AnimatePresence} from "framer-motion";
 
 import react from "../../assets/Images/tech-stacks/react.png";
 import node from "../../assets/Images/tech-stacks/nodejs.png";
@@ -12,7 +12,8 @@ import graphql from "../../assets/Images/tech-stacks/graphql.png"
 import sass from "../../assets/Images/tech-stacks/sass.png";
 import typescript from "../../assets/Images/tech-stacks/Typescript.png";
 import questions from "../../assets/Images/question-mark.svg"
-import "csshake"
+import "csshake";
+import SkillDescription from "../SkillDescription/SkillDescription"
 
 export default class Skills extends Component {
 
@@ -20,17 +21,37 @@ export default class Skills extends Component {
         super(props)
         this.state = {
             skills : [
-                {
-                    image: questions,
-                    top: 52,
-                    right: 49,
-                    name: "question"
-                },
+
                 {
                     image : react,
                     top: 50,
                     right: 80,
-                    name: "react"
+                    name: "react",
+                    concepts: ["React Router", "LifeCycle Methods", "Hooks", "Context"],
+                    smallDescription: "I love React! I use it consistently on all my projects. Below I highlighted the concepts I understand about it and how it use it.",
+                    uses: [
+                        "Utilize react-router to create a multi page site",
+                        "Fetching appropriate data by making an axios call with a route param id",
+                        "Calling functions upon mounting, updating, and unmounting of a components with React LifeCycle methods"
+                    ],
+                    projects : [
+                        {
+                            project: "Blumber",
+                            url: ""
+                        },
+                        {
+                            project: "Greatrr",
+                            url: ""
+                        },
+                        {
+                            project: "my portfolio",
+                            url: ""
+                        },
+                        {
+                            project: "snake game",
+                            url: ""
+                        }
+                    ]
                 },
                 {
                     image: node,
@@ -38,12 +59,38 @@ export default class Skills extends Component {
                     right: 70,
                     name: "node"
                 },
+
                 {
                     image: redux,
                     top: 100,
                     right: 47.5,
-                    name: "redux"
+                    name: "redux",
+                    concepts: ["Centralized State", "Reducers", "Action Creators"],
+                    smallDescription: "I found Redux to be extremely hard to grasp in the beginning. However, once I got past all the new terminology, I realized how powerful of a tool it can be.",
+                    uses: [
+                        "Place important information in centeralized state",
+                        "Provide authentication status to all necessary components; allowing me to render appropriate HTML structures"
+                    ],
+                    projects : [
+                        {
+                            project: "Blumber",
+                            url: ""
+                        },
+                        {
+                            project: "Greatrr",
+                            url: ""
+                        },
+                        {
+                            project: "my portfolio",
+                            url: ""
+                        },
+                        {
+                            project: "snake game",
+                            url: ""
+                        }
+                    ]
                 },
+                
                 {
                     image: mongo,
                     top: 85,
@@ -75,8 +122,23 @@ export default class Skills extends Component {
                     name: "express"
                 },
                 
-            ]
+            ],
+            currentDescription: "react",
+            describeChange : false
         }
+    }
+
+    changeSkillDescription = (e) => {
+        this.setState({
+            currentDescription: e.target.id,
+            describeChange : true
+        }, () => {
+            setTimeout(() => {
+                this.setState({
+                    describeChange: false
+                })
+            }, 750)
+        })
     }
 
 
@@ -86,6 +148,7 @@ export default class Skills extends Component {
                 <motion.div 
                     className={`Skills__node shake-little ${skill.name === "question" && "Skills__node--small"}`}
                     id={skill.name}
+                    onClick={this.changeSkillDescription}
                     style={{
                         backgroundImage : `url(${skill.image})`,
                         top: `${skill.top}%`,
@@ -103,24 +166,39 @@ export default class Skills extends Component {
         })
     }
 
+    displayDescription = () => {
+        const info =  this.state.skills.filter(skill => {
+            return skill.name === this.state.currentDescription
+        })
+
+        return <SkillDescription skillsInfo = {info[0]}/>
+    }
+
     render() {
         
         return (
             <motion.div 
-                className="Skills"
-                
+                className="Skills" 
             >
                 <div className="Skills__container">
                     <h3 className="Skills__heading">
                         My Skills
                     </h3>
+                    <p className="Skills__header-description">
+                        Alright, enough of me describing myself in the third-person. It's now time for you to check out my skills!
+                        Hover over a node below and it will anxiously await a click. Once you click it, you'll get a description 
+                        of what I know about that particular technology.
+                    </p>
                     <div className="Skills__skills-container">
                         <div className="Skills__graph-container">
                             {this.displayNodes()}
                         </div>
-                        <div className="Skills__description">
-                            adasd
-                        </div>
+                        <AnimatePresence>
+                            {!this.state.describeChange && (
+                                this.displayDescription()
+                            )}
+                        </AnimatePresence>
+                        
                     </div>
                     
                 </div>

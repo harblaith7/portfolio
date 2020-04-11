@@ -15,8 +15,14 @@
 
     &__skills-container {
         display: flex;
-
         margin-top: 7.5rem;
+    }
+
+    &__header-description {
+        font-size: 1.75rem;
+        margin-top: 2rem;
+        line-height: 3rem;
+        width: 70%
     }
 
     &__graph-container {
@@ -48,5 +54,38 @@
         }
     }
 
-    
+    &__tech-title {
+        font-size: 4rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        margin-top: -2rem;
+        text-transform: capitalize;
+    }
+
+    &__description-container {
+        width: 45%;
+        padding-top: 2rem;
+    }
+
+    &__description {
+        font-size: 1.75rem;
+        margin-top: 0.5rem;
+        line-height: 2.25rem;
+    }
+
+    &__concepts-title {
+        font-size: 2.1rem;
+        margin-top: 2rem; 
+    }
+
+    &__list-item {
+        margin-left: 2rem;
+        margin-top: 0.5rem;
+        font-size: 1.75rem;
+    }
+
+    &__use-title {
+        font-size: 2.1rem;
+        margin-top: 2rem; 
+    }
 }
