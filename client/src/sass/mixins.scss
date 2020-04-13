@@ -5,24 +5,26 @@
     }
 };
 
-@mixin width-1150px {
-    @media (max-width: 1100px){
-        @content
-    }
-};
-
-
 @mixin width-1100px {
     @media (max-width: 1100px){
         @content
     }
 };
 
+
+
 @mixin width-1050px {
     @media (max-width: 1050px){
         @content
     }
 };
+
+@mixin width-1000px {
+    @media (max-width: 1000px){
+        @content
+    }
+};
+
 
 @mixin width-950px {
     @media (max-width: 950px){

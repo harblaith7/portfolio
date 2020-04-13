@@ -21,7 +21,7 @@ export default class Nav extends Component {
                             </a>
                         </li>
                         <li className="Nav__list-item">
-                            <a href="#" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
+                            <a href="#skills" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`}>
                                 Skills
                             </a>
                         </li>

@@ -167,7 +167,7 @@
     } 
 }
 
-@include width-1150px {
+@include width-1100px {
 
     .Skills {
         
@@ -190,16 +190,35 @@
             text-align: center;
         }
 
+
         &__list-item {
             font-size: 1.75rem;
         }
 
         &__description-container {
-            width: 100%;
+            width: 80%;
+            margin: 0 auto;
             margin-top: 7.5rem;
+            text-align: center;
+        }
+
+        &__list-item {
+            list-style: none;
         }
             
         
+    }
+}
+
+@include width-1000px {
+    .Skills {
+
+        height: 180vh;
+        &__description-container {
+           
+            width: 90%
+            
+        }
     }
 }
 
@@ -307,7 +326,6 @@
 @include width-400px {
     .Skills {
         padding: 7.5rem 3rem;
-        background-color: blue;
         height: 200vh;
 
         &__node {

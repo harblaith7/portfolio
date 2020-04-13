@@ -305,6 +305,7 @@ export default class Skills extends Component {
         return (
             <motion.div 
                 className="Skills" 
+                id="skills"
             >
                 <div className="Skills__container">
                     <div className="Skills__heading-container">
