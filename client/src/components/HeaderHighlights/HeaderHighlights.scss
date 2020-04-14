@@ -1,8 +1,8 @@
 @import "../../sass/variables.scss";
 
 .HeaderHighlights {
-    height: 85vh;
-    background-image: linear-gradient(to right, $primary-lights, $primary-lighter);
+    height: 70vh;
+    background-image: linear-gradient(to bottom right, $primary-lighter, $primary-lights);
     font-family: "Lato";
 
     &__container {
@@ -22,16 +22,56 @@
     }
 
     &__header {
-        font-size: 5rem;
+        font-size: 7rem;
+        letter-spacing: 0.5rem;
+        color: $off-black;
     }
 
     &__img {
-        width: 45rem;
+        width: 40rem;
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
-        left: 135%;
+        left: 72%;
+        opacity: 0.75;
+        border-radius: 100%;
+        box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.11);
+    }
+
+    &__description {
+        width: 85%;
+        font-size: 1.75rem;
+        margin-top: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    &__btn {
+        cursor: pointer;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
     }
 }
 
 
+
+.btn6, .btn6:link, .btn6:visited {
+    padding: 1.3rem 2rem;
+    border: 1px solid #333;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 3px;
+    transition: all .2s ease-in-out;
+    background-color: transparent;
+    outline: none;
+    
+    &:hover {
+      background: $primary-dark;
+      border: 1px solid $primary-dark;
+      color: #fefefe;
+      border-radius: 30px;
+    }
+  }
+  
+  
