@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {motion} from "framer-motion"
 
+
 export default class SkillDescription extends Component {
 
     displayConcepts = () => {
