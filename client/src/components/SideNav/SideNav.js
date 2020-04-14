@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./SideNav.scss";
 import {motion} from "framer-motion"
 import closeBtn from "../../assets/Images/close-btn.svg"
+import {Link} from "react-router-dom"
 
 const variants = {
     open: { x: 0},
@@ -75,6 +76,14 @@ export default class Nav extends Component {
                     variants={ulVariants}
                 >
                     {this.displayLinks()}
+                    <motion.li 
+                        className="SideNav__list-item"
+                        variants={liVariants}
+                    >   
+                        <Link to="/highlights" className="SideNav__link" onClick={this.props.toggleNav}>
+                            Highlights
+                        </Link>
+                    </motion.li>
                 </motion.ul>
             </motion.nav>
         )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./Nav.scss";
 import hamburger from "../../assets/Images/hamburger.svg"
+import {Link} from "react-router-dom"
 
 export default class Nav extends Component {
 
@@ -31,9 +32,9 @@ export default class Nav extends Component {
                             </a>
                         </li>
                         <li className="Nav__list-item">
-                            <a href="#" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`} >
+                            <Link to="/highlights" className={`Nav__link ${this.props.showBackgroundColor && "Nav__link--active"}`} >
                                 Highlights
-                            </a>
+                            </Link>
                         </li>
                         <li className="Nav__list-item Nav__list-item--burger" onClick={this.props.toggleNav}>
                             <img src={hamburger} alt=""/>

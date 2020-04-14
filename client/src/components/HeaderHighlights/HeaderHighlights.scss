@@ -1,9 +1,11 @@
 @import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
 
 .HeaderHighlights {
     height: 70vh;
     background-image: linear-gradient(to bottom right, $primary-lighter, $primary-lights);
     font-family: "Lato";
+    position: relative;
 
     &__container {
         height: 100%;
@@ -11,14 +13,29 @@
         position: relative
     }
 
+    &__back-link {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        cursor: pointer;
+        z-index: 10
+    }
+
+    &__back-icon {
+        width: 3rem;
+        cursor: pointer;
+        opacity: 0.5
+    }
+
     &__text-container {
         height: 30rem;
-        width: 70rem;
+        width: 50%;
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
         left: 30%;
-        color: $off-black
+        color: $off-black;
+  
     }
 
     &__header {
@@ -75,3 +92,69 @@
   }
   
   
+@include width-1000px {
+    .HeaderHighlights {
+        
+        &__img {
+            width: 35rem;
+        }
+    }
+}
+
+@include width-900px {
+    .HeaderHighlights {
+        
+        &__img {
+            display: none
+        }
+
+        &__text-container  {
+
+            width: 75%;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        &__description {
+            margin: 0 auto
+        }
+
+        &__header {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@include width-650px {
+    .HeaderHighlights {
+
+        &__text-container {
+            width: 85%
+        }
+
+    }
+}
+
+@include width-500px {
+    .HeaderHighlights {
+
+        &__text-container {
+            width: 95%
+        }
+
+        &__header {
+            font-size: 5rem;
+        }
+
+        &__description {
+            font-size: 1.5rem;
+        }
+
+    }
+
+    .btn6 {
+        font-size: 0.75rem;
+    }
+}

@@ -15,7 +15,7 @@ export default class Highlights extends Component {
                             </h2>
                             <p className="Highlights__description">
                                 That's the only thing my coach use to say I do in a game.
-                                Well coach... It clearly worked this time! My defender was 
+                                <span>Well coach...</span>  It clearly worked this time! My defender was 
                                 was so confused by my ball handling wizardry that they completely froze.
                                 Easy buckets!
                             </p>
@@ -28,21 +28,22 @@ export default class Highlights extends Component {
                     </div>
 
                     <div className="Highlights__highlight-container Highlights__highlight-container--two">
+                        
+                        <div className="Highlights__text-container Highlights__text-container--two">
+                            <h2 className="Highlights__heading">
+                                Should have Dunked it
+                            </h2>
+                            <p className="Highlights__description">
+                                Another video of me crossing over nobody. 
+                                Totally should have dunked it instead of that soft finish.
+                                Next time, I'll make sure to lower the net a few feet.
+                            </p>
+                        </div>
+
                         <div className="Highlights__video-container">
                             <iframe src={handsomeMe} frameborder="0" className="Highlights__iframe">
                             
                             </iframe>
-                        </div>
-                        <div className="Highlights__text-container Highlights__text-container--two">
-                            <h2 className="Highlights__heading">
-                                Dribble, Dribble, Dribble...
-                            </h2>
-                            <p className="Highlights__description">
-                                That's the only thing my coach use to say I do in a game.
-                                Well coach... It clearly worked this time! My defender was 
-                                was so confused by my ball handling wizardry that they completely froze.
-                                Easy buckets!
-                            </p>
                         </div>
                         
                     </div>
