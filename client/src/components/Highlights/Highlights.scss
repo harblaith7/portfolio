@@ -108,3 +108,19 @@
 
     }
 }
+
+@include width-400px {
+    .Highlights {
+
+        &__description {
+            width: 100%;
+            font-size: 1.5rem
+        }
+
+        &__heading {
+            font-size: 3rem;
+            width: 100%
+        }
+
+    }
+}
