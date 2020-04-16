@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./HeaderHighlights.scss"
-import dribbleDribbleDribble from "../../assets/Images/dribbledribbledribble.jpg"
+import dribbleDribbleDribble from "../../assets/Images/front-me.jpg"
 import backIcon from "../../assets/Images/backIcon.svg"
 import {Link} from "react-router-dom"
 
@@ -19,7 +19,7 @@ export default class HeaderHighlights extends Component {
                         </h3>
                         <p className="HeaderHighlights__description">
                             Guys, I'm not just some boring programmer that sits around and codes web applications all day. 
-                            Sometimes I code web frameworks as well. In all seriousness, here are some pics and videos of non-programming 
+                            Sometimes I code web frameworks okay! In all seriousness, here are some pics and videos of non-programming 
                             things I enjoy doing. I'll add more post-quarantine.
                         </p>
                         <button className="HeaderHighlights__btn btn6" >Random button that does nothing</button>
