@@ -5,7 +5,7 @@ import blumber from "../../assets/Images/blumber.png"
 import greatrr from "../../assets/Images/Greatrr.png"
 import portfolio from "../../assets/Images/portfolio.png"
 import snakeGame from "../../assets/Images/snake.png"
-
+import smartGermz from "../../assets/Images/smart-germz.png"
 import react from "../../assets/Images/tech-stacks/react.png"
 import node from "../../assets/Images/tech-stacks/nodejs.png"
 import passport from "../../assets/Images/tech-stacks/passport.png"
@@ -41,14 +41,14 @@ export default class Projects extends Component {
                     url: "https://harb-greatrr.herokuapp.com/"
                 },
                 {
-                    name: "My Portfolio",
-                    description: "My wonderful portfolio",
-                    image: portfolio,
+                    name: "Smart Germz",
+                    description: "SmartGermz is an online platform for coders to improve their programming skills by reading comprehensive and enjoyable articles about their selected topic.",
+                    image: smartGermz,
                     reason: "I want to show you my projects! I also wanted to use this as an opportunity to learn more about how to animate a react application.",
                     techStack: "I simply used React for this project. However, I am utilizing framer-motion to create smooth animations",
                     techStackImages: [react, framerMotion],
                     status: "Almost Complete / Responsive / Deployed",
-                    url: "https://laithharb.com/"
+                    url: "https://smartgermz.com/"
                 },
                 {
                     name: "Voice Controlled Snake Game",

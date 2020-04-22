@@ -5,7 +5,7 @@
     padding: 7.5rem 16.5rem;
     font-family: 'Lato';
     margin-bottom: 10rem;
-    height: 120vh;
+    height: auto;
     
 
     &__heading {
@@ -18,6 +18,75 @@
     &__skills-container {
         display: flex;
         margin-top: 7.5rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    } 
+
+    &__skill-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+    }
+
+    &__skill-card-container {
+        width: 32rem;
+        height: 20rem;
+        position: relative;
+        overflow: hidden;
+        background-color: rgba(255,255,255,.1);
+        box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.336);
+        padding: 0.2rem;
+        border-radius: 0.5rem;
+        margin-bottom: 5rem;
+        margin-right: 4rem;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;;
+            background-color: rgba(233, 231, 229, 0.048);
+            filter: blur(.5rem);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.11));
+            transition: 0.75s;
+            filter: blur(2rem);
+        }
+
+        &:hover::after {
+            left: 100%
+        }
+
+        & span {
+            position: absolute;
+            display: block;
+            transition: 0.5s ease;
+        }
+
+        & span:nth-child(1) {
+            top: 0.1%;
+            left: 0;
+            width: 0;
+            height: 0.2rem;
+            background: rgba(163, 161, 161, 0.301)
+        }
+
+        &:hover span:nth-child(1) {
+            width: 100%;
+            transform: translateX(100%)
+        }
     }
 
     &__header-description {
@@ -171,11 +240,11 @@
 
     .Skills {
         
-        height: 170vh;
 
         &__skills-container {
-            flex-direction: column;
+            justify-content: center;
         }
+
 
         &__header-description {
             width: 95%
@@ -202,6 +271,12 @@
             text-align: center;
         }
 
+        &__skill-card-container {
+            
+           width: 45rem;
+           height: 30rem
+        }
+
         &__list-item {
             list-style: none;
         }
@@ -213,7 +288,6 @@
 @include width-1000px {
     .Skills {
 
-        height: 180vh;
         &__description-container {
            
             width: 90%
@@ -228,6 +302,13 @@
         &__graph-container {
             //background-color: blue;
             padding: 0;
+        }
+
+        &__skill-card-container {
+            width: 35rem;
+            height: 20rem;
+            margin: 0;
+            margin-top: 4rem
         }
 
         &__description-container {
@@ -326,7 +407,7 @@
 @include width-400px {
     .Skills {
         padding: 7.5rem 3rem;
-        height: 200vh;
+
 
         &__node {
             width: 6rem;
@@ -340,4 +421,5 @@
         }
     }
 }
+
 

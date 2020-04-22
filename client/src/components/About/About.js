@@ -22,8 +22,8 @@ export default class About extends Component {
                             <p className="About__text-description">
                                 So glad you asked! This guy's name is Laith Harb and he is a full-stack developer. 
                                 He went to Queens' and graduated with a Biochemistry degree and then attended and 
-                                completed BrainStation's Web Development diploma program. He is very comfortable 
-                                with using HTML, CSS, SCSS, React, Redux, Node, Express, MongoDB, and MySQL. You 
+                                completed BrainStation's Web Development diploma program. He is comfortable 
+                                with using TypeScript, React, Redux, GraphQL, Prisma, Apollo, Node, Express, MongoDB, and MySQL. You 
                                 should check out his projects!
                                 <br/>
                                 <br/>
