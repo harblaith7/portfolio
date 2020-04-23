@@ -1,0 +1,52 @@
+.SkillsDescription {
+    font-family: 'Lato';
+
+    &__container {
+        
+        width: 80%;
+        margin: 0 auto;
+        padding: 10rem 0 5rem 0
+    }
+
+    &__header {
+        font-size: 5rem;
+        letter-spacing: 0.25rem;
+    }
+
+    &__description {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        color: rgb(22, 22, 22);
+        line-height: 3rem;
+        word-spacing: 0.1rem;
+
+        & span {
+            font-weight: 900;
+        }
+
+        & a {
+            color: rgb(30, 60, 100);
+            font-weight: 900;
+            text-decoration: none;
+        }
+    }
+
+    &__sub-header {
+        font-size: 3rem;
+        letter-spacing: 0.25rem;
+        margin-top: 3rem;
+    }
+
+    &__go-back {
+        margin-left: 10%;
+        text-decoration: none;
+        background-color: rgba(20, 20, 20, 0.788);
+        padding: 1.5rem 5rem;
+        color: rgb(251, 252, 213);
+        font-size: 2rem;
+        border-radius: 0.4rem;
+        letter-spacing: 0.3rem;
+        font-weight: 700;
+    }
+
+}

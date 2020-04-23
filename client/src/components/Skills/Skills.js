@@ -20,274 +20,52 @@ export default class Skills extends Component {
     constructor(props){
         super(props)
         this.state = {
-            skills : [
-
-                {
-                    image : react,
-                    name: "react",
-                    concepts: ["React Router", "LifeCycle Methods", "Hooks", "Context"],
-                    smallDescription: "I love React! I use it consistently on all my projects. Below I highlighted the concepts I understand about it and how it use it.",
-                    uses: [
-                        "Utilize react-router to create a multi page site",
-                        "Fetching appropriate data by making an axios call with a route param id",
-                        "Calling functions upon mounting, updating, and unmounting of a components with React LifeCycle methods"
-                    ],
-                    projects : [
-                        {
-                            project: "Blumber",
-                            url: ""
-                        },
-                        {
-                            project: "Greatrr",
-                            url: ""
-                        },
-                        {
-                            project: "my portfolio",
-                            url: ""
-                        },
-                        {
-                            project: "snake game",
-                            url: ""
-                        }
-                    ]
-                },
-                {
-                    image: node,
-                    top: 15,
-                    right: 70,
-                    name: "node",
-                    concepts: ["Non-blocking I/O", "Event loop", "Modules", "Prototypes"],
-                    smallDescription: "Node was the first technology I learned when diving into back-end development. I never use Node in isolation, but rather with Express as well.",
-                    uses: [
-                        "Store data in native JSON format in database",
-                        "Creating easy, fast and scalable full-stack applications"
-                    ],
-                    projects : [
-                        {
-                            project: "Blumber",
-                            url: ""
-                        },
-                        {
-                            project: "Greatrr",
-                            url: ""
-                        },
-                        {
-                            project: "my portfolio",
-                            url: ""
-                        },
-                        {
-                            project: "snake game",
-                            url: ""
-                        }
-                    ]
-                },
-
-                {
-                    image: redux,
-                    name: "redux",
-                    concepts: ["Centralized State", "Reducers", "Action Creators"],
-                    smallDescription: "I found Redux to be extremely hard to grasp in the beginning. However, once I got past all the new terminology, I realized how powerful of a tool it can be.",
-                    uses: [
-                        "Place important information in centeralized state",
-                        "Provide authentication status to all necessary components; allowing me to render appropriate HTML structures"
-                    ],
-                    projects : [
-                        {
-                            project: "Blumber",
-                            url: ""
-                        },
-                        {
-                            project: "Greatrr",
-                            url: ""
-                        },
-                        {
-                            project: "my portfolio",
-                            url: ""
-                        },
-                        {
-                            project: "snake game",
-                            url: ""
-                        }
-                    ]
-                },
-                
-                {
-                    image: mongo,
-                    name: "mongoDB",
-                    concepts: ["Documents/Subdocuments", "Embed/Reference", "Mongoose"],
-                    smallDescription: "For all my applications that require a database, I've used MongoDB/Mongoose.",
-                    uses: [
-                        "Fetch appropriate user data based on authentication id",
-                        "Perform all necessary CRUD operations"
-                    ],
-                    projects : [
-                        {
-                            project: "Blumber",
-                            url: ""
-                        },
-                        {
-                            project: "Greatrr",
-                            url: ""
-                        },
-                        {
-                            project: "my portfolio",
-                            url: ""
-                        },
-                        {
-                            project: "snake game",
-                            url: ""
-                        }
-                    ]
-                },
-                {
-                    image: typescript,
-                    name: "typeScript",
-                    concepts: ["Type System", "Annotation/Inference", "Design Patterns"],
-                    smallDescription: "I am currently learning TypeScript. I'm realizing how powerful it can be to debug during development. Once I understand the concepts, I will use it in all my future JavaScript applications",
-                    uses: [
-                        "Catch errors in development instead of in the browser"
-                    ],
-                    projects : [
-                        {
-                            project: "Blumber",
-                            url: ""
-                        },
-                        {
-                            project: "Greatrr",
-                            url: ""
-                        },
-                        {
-                            project: "my portfolio",
-                            url: ""
-                        },
-                        {
-                            project: "snake game",
-                            url: ""
-                        }
-                    ]
-                },
-                {
-                    image: mysql,
-                    name: "mySQL",
-                    concepts: ["One to Many Relationship", "Many to Many Relationship", "Inner/Left/Right Join"],
-                    smallDescription: "I learned MySQL on my own and I find that it is very readable and easy to use. I intend to use MySQL as my database for my next project.",
-                    uses: [
-                        "Join tables to create one table with desired data",
-                        "Perform CRUD operations"
-                    ],
-                    projects : [
-                        {
-                            project: "Blumber",
-                            url: ""
-                        },
-                        {
-                            project: "Greatrr",
-                            url: ""
-                        },
-                        {
-                            project: "my portfolio",
-                            url: ""
-                        },
-                        {
-                            project: "snake game",
-                            url: ""
-                        }
-                    ]
-                },
-                {
-                    image: graphql,
-                    name: "graphQL",
-                    concepts: ["N/A"],
-                    smallDescription: "Honestly, I don't know any GraphQL at the moment, but it is the next technology stack on my \"to learn\" list after TypeScript.",
-                    uses: [
-                        "N/A"
-                    ],
-                    projects : [
-                        {
-                            project: "Blumber",
-                            url: ""
-                        },
-                        {
-                            project: "Greatrr",
-                            url: ""
-                        },
-                        {
-                            project: "my portfolio",
-                            url: ""
-                        },
-                        {
-                            project: "snake game",
-                            url: ""
-                        }
-                    ]
-                },
-                {
-                    image: express,
-                    name: "express",
-                    concepts: ["Routes", "Callback", "Asynchronous"],
-                    smallDescription: "I use the Express library all the time when making full-stack applications. It allows me to make complex routes that fetch data and redirect users to different pages",
-                    uses: [
-                        "Create routes to filter through and fetch appropriate data from database or JSON file",
-                        "Create, send and save data to database"
-                    ],
-                    projects : [
-                        {
-                            project: "Blumber",
-                            url: ""
-                        },
-                        {
-                            project: "Greatrr",
-                            url: ""
-                        },
-                        {
-                            project: "my portfolio",
-                            url: ""
-                        },
-                        {
-                            project: "snake game",
-                            url: ""
-                        }
-                    ]
-                },
-                
-            ],
             currentDescription: "react",
             describeChange : false,
             skillz : [
                 {
-                    name: "typescript",
+                    name: "TypeScript",
+                    id: "typescript",
                     img: "https://blog.syncfusion.com/wp-content/uploads/2018/08/ts_tile.png",
                 },
                 {
                     name: "React",
+                    id:"react",
                     img: "https://wallpapercave.com/wp/wp4923981.jpg",
                 },
                 {
                     name: "Redux",
+                    id: "redux",
                     img: "https://miro.medium.com/max/2880/1*n49UEh_U3iEqPHpp8eSSUw.png",
                 },
                 {
                     name: "GraphQL",
+                    id: "graphql",
                     img: "https://miro.medium.com/max/5120/1*MGM-mwrfaPHWZIr0JiTKfA.png",
                 },
                 {
                     name: "Node",
+                    id: "node",
                     img: "https://images8.alphacoders.com/380/380534.png",
                 },
                 {
                     name: "Express",
+                    id: "express",
                     img: "https://raygun.com/blog/wp-content/uploads/2015/04/express1.png",
                 },
                 {
                     name: "MongoDB",
+                    id: "mongodb",
                     img: "https://lh3.googleusercontent.com/iKHbqfOA22cBvWvdnGoi165ZxDy6lqWHDIrmDGORZU0NvNX_CgnexW8OgKmDVd5sQongQwCwsqsnu3SJCCPySlozJFYnJRE=s600",
                 },
                 {
                     name: "MySQL",
+                    id: "mysql",
                     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ0DBkyBH8Xk41fW9jmSxidUCEHaQo0XAR_Ezr1R1LEBjkxPQwR&usqp=CAU",
                 },
                 {
                     name: "PostgreSQL",
+                    id: "postgresql",
                     img: "https://miro.medium.com/max/3200/1*JHGJ98mdQ9d18XUWuMNMqw.jpeg",
                 },
             ]
@@ -310,7 +88,7 @@ export default class Skills extends Component {
     displaySkillsCard = () => {
         return this.state.skillz.map(skill => {
             return (
-                <Link className="Skills__skill-card-container" to="/">
+                <Link className="Skills__skill-card-container" to={`/skill/${skill.id}`}>
                     <span></span>
                     <span></span>
                     <span></span>
