@@ -88,7 +88,7 @@ export default class Skills extends Component {
     displaySkillsCard = () => {
         return this.state.skillz.map(skill => {
             return (
-                <Link className="Skills__skill-card-container" to={`/skill/${skill.id}`}>
+                <Link className="Skills__skill-card-container" to={`/skill/${skill.id}#skill`}>
                     <span></span>
                     <span></span>
                     <span></span>

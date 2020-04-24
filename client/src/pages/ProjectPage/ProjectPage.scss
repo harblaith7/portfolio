@@ -1,0 +1,42 @@
+.ProjectPage {
+
+    font-family: "Lato";
+    padding-bottom: 10rem;
+
+    &__container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 10rem 0
+    }
+
+    &__heading {
+        font-size: 5rem;
+    }
+
+    &__description {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        line-height: 3rem;
+    }
+
+    &__sub-header {
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+
+    &__img-container {
+        display: flex;
+        margin-top: 2.5rem;;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        width: 10.5rem;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5rem;
+    }
+
+}

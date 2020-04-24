@@ -242,7 +242,7 @@ export default class SkillsDescription extends Component {
     render() {
         const {name, intro, knowledge, projects} = this.state.currentSkill
         return (
-            <div className="SkillsDescription">
+            <div className="SkillsDescription" id="skill">
                 <Nav/>
                 <div className="SkillsDescription__container">
                     <h2 className="SkillsDescription__header">
